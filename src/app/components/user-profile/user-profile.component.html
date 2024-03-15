@@ -1,0 +1,43 @@
+<!-- <h1>This user profile section</h1>
+<h4>Name: {{ name }}</h4>
+<h4>Status: {{ status }}</h4>
+<h4>Age: {{ Age }}</h4>
+<h4>Salary: {{ salary }}</h4>
+<h4>Phone: {{phoneNo | countryCode:"USA"}}</h4>
+<button [disabled]="isBtnDisabled">Click Me</button>
+<h1>Input value: {{ inputVal }}</h1>
+<input type="text" [value]="inputVal" (input)="onChange($event)" />
+<input type="text" [(ngModel)]="inputVal" />
+
+<div style="display: block;">
+    @for(user of users; track user.name){
+    @if(user.status === "Single"){
+    <h3>Name: {{ user.name | titlecase }}</h3>
+    <h3>Age: {{ user.Age }}</h3>
+    <h3>Salary:{{ user.salary | currency:"INR" }}</h3>
+    <h3>Status:{{ user.status === "Single" ? "Great Coder" : "Noob Coder" }}</h3>
+    } @else {
+    <h3>Name: {{ user.name | titlecase }}</h3>
+    <h3>Age: {{ user.Age }}</h3>
+    <h3>Salary:{{ user.salary | currency: "INR" }}</h3>
+    <h3>Status: Can't tell</h3>
+    }
+    <hr />
+    }
+</div>
+
+<hr />
+
+<div *ngFor="let user of users">
+    <h3 *ngIf="user.salary > 4000000; else elseBlock">Name: {{ user.name }} Age: {{ user.Age }} Salary:{{ user.salary }}
+        Status:{{ user.status === "Single" ? "Great Coder" : "Noob Coder" }}</h3>
+    <ng-template #elseBlock>
+        <h3>Name: {{ user.name }} Age: {{ user.Age }} Salary:hidden Status:{{ user.status === "Single" ? "Great Coder" :
+            "Noob Coder" }}</h3>
+    </ng-template>
+
+</div> -->
+
+
+<h1 #myHeading>name: {{name()}} Status: {{isSingle ? "Single" : "Diver"}} Salary: {{salary}}</h1>
+<button (click)="sendData()">Send Data</button>
